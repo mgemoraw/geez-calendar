@@ -1,14 +1,15 @@
 from core.ethiopian_date import EthiopianDate
 
-# Create Ethiopian date
-eth_date = EthiopianDate(2016, 1, 1)  # 1 Meskerem 2016
+# Ethiopian → Gregorian
+eth = EthiopianDate(2017, 13, 5)  
+print(eth.to_gregorian())  
+# (202, 9, 11)
 
-# Convert to Gregorian
-print(eth_date.to_gregorian())   # (2023, 9, 11)
+# Gregorian → Ethiopian
+eth2 = EthiopianDate.from_gregorian(2023, 9, 11)
+print(eth2)  
+# 1 Meskerem 2016
 
-# Convert Gregorian to Ethiopian
-eth_from_greg = EthiopianDate.from_gregorian(2023, 9, 11)
-print(eth_from_greg)  # EthiopianDate(2016, 1, 1)
-
-# Today's Ethiopian date
-print(EthiopianDate.today())
+# Leap year check
+print(EthiopianDate.is_leap(2015))  # False
+print(EthiopianDate.is_leap(2016))  # True
