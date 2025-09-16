@@ -1,25 +1,21 @@
-
-### 6. `pyproject.toml`
-# ```toml
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ethio-calendar"
+name = "geez-calendar"
 version = "0.1.0"
-description = "Ethiopian Calendar with conversions to/from Gregorian"
-authors = [
-  { name="Mengistu Getie", email="mengist.dev@gmail.com" }
-]
-readme = "README.md"
+description = "Ethiopian ↔ Gregorian date conversion utilities."
+authors = [{ name = "Mengistu Getie", email = "mengist.dev@gmail.com" }]
 license = { text = "MIT" }
+readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries",
+    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Topic :: Software Development :: Libraries"
 ]
 
-[tool.setuptools.packages.find]
-where = ["ethiopian_date"]
+[project.urls]
+Homepage = "https://github.com/mgemoraw/geez-calendar"
